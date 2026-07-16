@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="拾壹香室">
+  <rect width="128" height="128" rx="28" fill="#576d52" />
+  <circle cx="64" cy="64" r="42" fill="#fffaf0" opacity="0.92" />
+  <path d="M44 84h40" stroke="#b58a43" stroke-width="7" stroke-linecap="round" />
+  <path d="M50 72c18-8 28-18 31-34" stroke="#1f2924" stroke-width="7" stroke-linecap="round" fill="none" />
+  <path d="M58 72c10-5 17-12 20-23" stroke="#a24f3f" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8" />
+</svg>

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/shop/shop",
+    "pages/maker/maker",
+    "pages/booking/booking",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "拾壹香室",
+    "navigationBarBackgroundColor": "#f2eee4",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f2eee4"
+  },
+  "tabBar": {
+    "color": "#6d756d",
+    "selectedColor": "#9f4635",
+    "backgroundColor": "#fffaf0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "香品"
+      },
+      {
+        "pagePath": "pages/maker/maker",
+        "text": "调香"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,54 @@
+<view class="page maker-page">
+  <view class="maker-hero card">
+    <view class="eyebrow">INCENSE ATELIER</view>
+    <view class="title">一炷香成</view>
+    <view class="subtitle">拖动香材比例，生成一张适合自己场景的香气画像。保存后可在“我的”查看。</view>
+    <view class="formula-name">{{formula.name}}</view>
+    <view class="formula-copy">{{formula.suggestion}}</view>
+    <view class="scent-orbit">
+      <view class="orbit-core">香</view>
+      <view class="orbit-line"></view>
+      <view class="orbit-dot fresh">清</view>
+      <view class="orbit-dot wood">木</view>
+      <view class="orbit-dot warm">暖</view>
+      <view class="orbit-dot sweet">甜</view>
+    </view>
+    <view class="ratio-grid">
+      <view class="ratio" wx:for="{{formula.ratios}}" wx:key="id">
+        <view class="ratio-value">{{item.value}}%</view>
+        <view class="ratio-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section preset-row">
+    <button class="preset" wx:for="{{presets}}" wx:key="*this" data-name="{{item}}" bindtap="applyPreset">{{item}}</button>
+    <button class="preset reset" bindtap="resetFormula">重置</button>
+  </view>
+
+  <view class="section ingredient-list">
+    <view class="ingredient card" wx:for="{{ingredients}}" wx:key="id">
+      <view class="row space-between">
+        <view>
+          <view class="ingredient-name">{{item.name}}</view>
+          <view class="ingredient-note">{{item.note}}</view>
+        </view>
+        <view class="ingredient-value">{{item.value}}</view>
+      </view>
+      <slider
+        min="0"
+        max="10"
+        step="1"
+        value="{{item.value}}"
+        activeColor="#9f4635"
+        backgroundColor="#dfe8e2"
+        block-color="#18211d"
+        block-size="22"
+        data-id="{{item.id}}"
+        bindchange="changeIngredient"
+      />
+    </view>
+  </view>
+
+  <button class="primary-button save" bindtap="saveFormula">保存香方</button>
+</view>

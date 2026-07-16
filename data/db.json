@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "id": "nha-trang",
+      "name": "芽庄沉香",
+      "category": "daily",
+      "categoryLabel": "日用香",
+      "spec": "21cm * 10g",
+      "price": 118,
+      "stock": 36,
+      "image": "/assets/docx-product/image11.jpeg",
+      "note": "甜凉花果",
+      "desc": "惠安系一线产区，越南芽庄壳子为原料，柔和甜美，回味带蜜甜脂粉香气。"
+    },
+    {
+      "id": "water-agarwood",
+      "name": "养生水沉",
+      "category": "daily",
+      "categoryLabel": "日用香",
+      "spec": "21cm * 10g",
+      "price": 128,
+      "stock": 42,
+      "image": "/assets/docx-product/image1.jpeg",
+      "note": "清甜入门",
+      "desc": "入门级海南沉香，香气柔和稳重，加热后凉意透彻，尾韵有清甜花果香。"
+    },
+    {
+      "id": "bodhi",
+      "name": "菩提心",
+      "category": "ritual",
+      "categoryLabel": "香道香",
+      "spec": "21cm * 10g",
+      "price": 420,
+      "stock": 18,
+      "image": "/assets/docx-product/image6.jpeg",
+      "note": "海南清韵",
+      "desc": "以海南沉香为灵感，清雅花香、果香与蜜香并存，适合静心独处与日常品闻。"
+    },
+    {
+      "id": "qinan",
+      "name": "菩萨棋南",
+      "category": "ritual",
+      "categoryLabel": "香道香",
+      "spec": "21cm * 10g",
+      "price": 480,
+      "stock": 12,
+      "image": "/assets/docx-product/image9.jpeg",
+      "note": "凉甜穿透",
+      "desc": "海南虫漏沉香，醇化十年左右，凉味与甜味清晰明朗，穿透力强。"
+    },
+    {
+      "id": "lichen",
+      "name": "离尘",
+      "category": "gift",
+      "categoryLabel": "礼品香",
+      "spec": "10cm * 10g",
+      "price": 880,
+      "stock": 8,
+      "image": "/assets/docx-product/image4.jpeg",
+      "note": "富森红土",
+      "desc": "富森红土香气浓郁馨甜，点燃时清甜婉转，适合书房、庭院与雅集。"
+    },
+    {
+      "id": "qiongya",
+      "name": "琼崖",
+      "category": "gift",
+      "categoryLabel": "礼品香",
+      "spec": "21cm * 10g",
+      "price": 1280,
+      "stock": 6,
+      "image": "/assets/docx-product/image8.jpeg",
+      "note": "龙涎棋楠",
+      "desc": "富森红土为骨，龙涎做引，棋楠为魂，沉稳蜜甜，烟气细腻，留香持久。"
+    },
+    {
+      "id": "handcraft",
+      "name": "DIY 香牌体验",
+      "category": "craft",
+      "categoryLabel": "手作",
+      "spec": "60min / 人",
+      "price": 98,
+      "stock": 50,
+      "image": "/assets/shiyi-incense-workshop.png",
+      "note": "预约体验",
+      "desc": "文化导入、香材认知、手作成型与冥想带走，适合朋友同行与亲子体验。"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-mq5741cw-hvj7lp",
+      "items": [
+        {
+          "id": "bodhi",
+          "name": "菩提心",
+          "price": 420
+        }
+      ],
+      "total": 420,
+      "paymentMethod": "线下确认 / 微信 / 支付宝",
+      "status": "created",
+      "createdAt": "2026-06-08T12:37:07.424Z"
+    },
+    {
+      "id": "order-mq573udj-ze6dy5",
+      "items": [
+        {
+          "id": "bodhi",
+          "name": "菩提心",
+          "price": 420
+        }
+      ],
+      "total": 420,
+      "paymentMethod": "线下确认 / 微信 / 支付宝",
+      "status": "created",
+      "createdAt": "2026-06-08T12:36:58.375Z"
+    }
+  ],
+  "bookings": [],
+  "formulas": [],
+  "notes": [
+    {
+      "id": "note-1",
+      "content": "夜读时点一支菩提心，清甜很安静。",
+      "createdAt": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": "note-2",
+      "content": "想带朋友来做香牌体验。",
+      "createdAt": "2026-06-07T00:00:00.000Z"
+    }
+  ],
+  "members": [
+    {
+      "id": "guest",
+      "name": "访客会员",
+      "points": 84,
+      "level": "初香"
+    }
+  ]
+}

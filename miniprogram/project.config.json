@@ -1,0 +1,48 @@
+{
+  "description": "拾壹香室微信小程序",
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "suffix",
+        "value": ".map"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "minified": false,
+    "compileWorklet": true,
+    "uglifyFileName": true,
+    "uploadWithSourceMap": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": false,
+    "minifyWXML": false,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": true,
+    "swc": true,
+    "disableSWC": false,
+    "ignoreDevUnusedFiles": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "appid": "wxfe1c2af132e94853",
+  "miniprogramRoot": "./",
+  "projectname": "shiyi-xiangshi-miniprogram",
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

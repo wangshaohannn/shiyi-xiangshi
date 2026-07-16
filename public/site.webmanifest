@@ -1,0 +1,19 @@
+{
+  "name": "拾壹香室",
+  "short_name": "拾壹香室",
+  "description": "东方香气艺术空间，提供沉香线香、手作香牌体验、香道课程与礼赠香品。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f1e8",
+  "theme_color": "#576d52",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

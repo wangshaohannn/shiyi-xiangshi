@@ -1,0 +1,81 @@
+.booking-hero {
+  padding: 24rpx 4rpx 8rpx;
+}
+
+.booking-summary {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 26rpx;
+  border-top: 1rpx solid rgba(24, 33, 29, 0.12);
+  border-bottom: 1rpx solid rgba(24, 33, 29, 0.12);
+}
+
+.booking-summary text {
+  padding: 14rpx 18rpx;
+  color: #4f6257;
+  font-size: 22rpx;
+  font-weight: 900;
+}
+
+.process,
+.field-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14rpx;
+}
+
+.process-item {
+  flex: 1 1 300rpx;
+  min-height: 172rpx;
+  padding: 22rpx 16rpx;
+}
+
+.process-index {
+  display: flex;
+  width: 46rpx;
+  height: 46rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999rpx;
+  background: #18211d;
+  color: #fffaf0;
+  font-size: 22rpx;
+  font-weight: 900;
+}
+
+.process-title {
+  margin-top: 18rpx;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.process-copy {
+  margin-top: 10rpx;
+  color: #657169;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+
+.booking-form {
+  padding: 32rpx 30rpx;
+}
+
+.field-grid .field {
+  flex: 1 1 300rpx;
+}
+
+.picker-line {
+  display: flex;
+  height: 84rpx;
+  align-items: center;
+  padding: 0 24rpx;
+  border: 1rpx solid rgba(24, 33, 29, 0.14);
+  border-radius: 10rpx;
+  background: #fffaf0;
+  color: #18211d;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 28rpx;
+}

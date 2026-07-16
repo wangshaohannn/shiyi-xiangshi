@@ -1,0 +1,115 @@
+<view class="page shop-page">
+  <view class="shop-head">
+    <view>
+      <view class="eyebrow">CURATED SHOP</view>
+      <view class="title">本季香单</view>
+      <view class="subtitle">从日用清甜到雅集礼赠，先生成咨询单，再由店主确认库存、配送和支付。</view>
+      <view class="shop-summary">
+        <text>{{products.length}} 款香品</text>
+        <text>场景筛选</text>
+        <text>线下确认</text>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x>
+    <view class="category-track">
+      <button
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="category-pill {{activeCategory === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="chooseCategory"
+      >{{item.name}}</button>
+    </view>
+  </scroll-view>
+
+  <view class="selected card" wx:if="{{selectedProduct}}">
+    <image class="selected-image" src="{{selectedProduct.image}}" mode="aspectFill" />
+    <view class="selected-body">
+      <view class="row space-between">
+        <text class="pill">{{selectedProduct.categoryLabel}}</text>
+        <text class="price">¥{{selectedProduct.price}}</text>
+      </view>
+      <view class="selected-name">{{selectedProduct.name}}</view>
+      <view class="selected-meta">{{selectedProduct.note}} · {{selectedProduct.spec}} · 库存 {{selectedProduct.stock}}</view>
+      <view class="selected-desc">{{selectedProduct.desc}}</view>
+      <view class="selected-proof">
+        <text>{{selectedProduct.categoryLabel}}</text>
+        <text>{{selectedProduct.note}}</text>
+        <text>库存 {{selectedProduct.stock}}</text>
+      </view>
+      <button class="primary-button" bindtap="addSelected">加入咨询清单</button>
+    </view>
+  </view>
+
+  <view class="product-list">
+    <view
+      class="product-row card {{selectedProduct && selectedProduct.id === item.id ? 'current' : ''}}"
+      wx:for="{{filteredProducts}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="selectProduct"
+    >
+      <image class="product-thumb" src="{{item.image}}" mode="aspectFill" />
+      <view class="product-info">
+        <view class="row space-between">
+          <text class="product-name">{{item.name}}</text>
+          <text class="product-price">¥{{item.price}}</text>
+        </view>
+        <view class="product-note">{{item.note}} · {{item.categoryLabel}}</view>
+      </view>
+      <button class="add-button" data-id="{{item.id}}" catchtap="addFromList">加入</button>
+    </view>
+  </view>
+
+  <view class="section cart card">
+    <view class="row space-between">
+      <view>
+        <view class="eyebrow">ORDER NOTE</view>
+        <view class="cart-title">咨询清单</view>
+      </view>
+      <button class="text-button" wx:if="{{cart.length}}" bindtap="clearCart">清空</button>
+    </view>
+
+    <view class="empty" wx:if="{{!cart.length}}">还没有选择香品。可先按场景浏览，再加入咨询清单。</view>
+    <view class="cart-item" wx:for="{{cart}}" wx:key="id">
+      <view>
+        <view class="cart-name">{{item.name}}</view>
+        <view class="muted">¥{{item.price}} / {{item.spec}}</view>
+      </view>
+      <view class="counter">
+        <button data-id="{{item.id}}" data-step="-1" bindtap="changeCount">-</button>
+        <text>{{item.count}}</text>
+        <button data-id="{{item.id}}" data-step="1" bindtap="changeCount">+</button>
+      </view>
+    </view>
+    <view class="cart-total" wx:if="{{cart.length}}">
+      <text>合计</text>
+      <text>¥{{total}}</text>
+    </view>
+  </view>
+
+  <view class="section form card">
+    <view class="eyebrow">CONTACT</view>
+    <view class="field">
+      <text class="field-label">姓名</text>
+      <input class="input" placeholder="请输入姓名" value="{{buyerName}}" data-field="buyerName" bindinput="bindInput" />
+    </view>
+    <view class="field">
+      <text class="field-label">电话 / 微信</text>
+      <input class="input" placeholder="用于确认订单" value="{{buyerPhone}}" data-field="buyerPhone" bindinput="bindInput" />
+    </view>
+    <view class="field">
+      <text class="field-label">取货方式</text>
+      <picker mode="selector" range="{{pickupOptions}}" value="{{pickupIndex}}" bindchange="bindPickup">
+        <view class="picker-line">{{pickupOptions[pickupIndex]}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <text class="field-label">备注</text>
+      <textarea class="textarea" placeholder="用途、预算、送礼对象或偏好香气" value="{{remark}}" data-field="remark" bindinput="bindInput" />
+    </view>
+    <button class="primary-button submit" bindtap="submitOrder">提交咨询单</button>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">微信二维码占位图</title>
+  <desc id="desc">上线前请替换为拾壹香室真实微信二维码。</desc>
+  <rect width="360" height="360" rx="24" fill="#fffaf0"/>
+  <rect x="24" y="24" width="312" height="312" rx="18" fill="#f4f1e8" stroke="#b58a43" stroke-width="4"/>
+  <g fill="#1f2924">
+    <rect x="55" y="55" width="78" height="78" rx="8"/>
+    <rect x="227" y="55" width="78" height="78" rx="8"/>
+    <rect x="55" y="227" width="78" height="78" rx="8"/>
+    <rect x="74" y="74" width="40" height="40" rx="5" fill="#fffaf0"/>
+    <rect x="246" y="74" width="40" height="40" rx="5" fill="#fffaf0"/>
+    <rect x="74" y="246" width="40" height="40" rx="5" fill="#fffaf0"/>
+    <rect x="160" y="58" width="18" height="48"/>
+    <rect x="184" y="58" width="18" height="18"/>
+    <rect x="157" y="128" width="68" height="18"/>
+    <rect x="157" y="157" width="18" height="52"/>
+    <rect x="187" y="157" width="48" height="18"/>
+    <rect x="217" y="187" width="18" height="48"/>
+    <rect x="157" y="229" width="48" height="18"/>
+    <rect x="187" y="259" width="18" height="46"/>
+    <rect x="229" y="229" width="76" height="18"/>
+    <rect x="259" y="259" width="18" height="46"/>
+    <rect x="287" y="287" width="18" height="18"/>
+  </g>
+  <rect x="72" y="154" width="216" height="52" rx="8" fill="#fffaf0" stroke="#b58a43" stroke-width="3"/>
+  <text x="180" y="176" text-anchor="middle" fill="#1f2924" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700">二维码占位</text>
+  <text x="180" y="196" text-anchor="middle" fill="#647067" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12">替换为真实微信二维码</text>
+</svg>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="拾壹香室沉香线香动态产品展示，含 3D 产品陈列、香调切换与产品图鉴。"
+    />
+    <title>拾壹香室 | 沉香线香动态产品展示</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <section class="hero" aria-label="拾壹香室沉香线香 3D 展示">
+          <canvas id="productScene" aria-label="沉香线香 3D 产品模型"></canvas>
+
+          <header class="site-header">
+            <a class="brand-mark" href="#top" aria-label="拾壹香室首页">
+              <span>拾壹</span>
+              <small>香室</small>
+            </a>
+            <nav aria-label="页面导航">
+              <a href="#collection">香品</a>
+              <a href="#ritual">场景</a>
+              <a href="#craft">工艺</a>
+            </nav>
+          </header>
+
+          <div class="hero-copy" id="top">
+            <p class="eyebrow">沉香线香 · 立体香气展示</p>
+            <h1>在一炷香的时间里，打开沉静的层次。</h1>
+            <p class="lead">
+              以沉香、棋楠、龙涎等香材为骨，重构一套具有东方留白感的动态产品页面。
+              首屏可切换香品，3D 礼盒随香调变化。
+            </p>
+            <div class="hero-actions" aria-label="主要操作">
+              <a class="primary-action" href="#collection">查看香品</a>
+              <button class="ghost-action" type="button" id="spinToggle" aria-pressed="true">
+                自动旋转
+              </button>
+            </div>
+          </div>
+
+          <aside class="product-panel" aria-label="香品切换">
+            <div class="panel-heading">
+              <span>当前香品</span>
+              <strong id="activeName">伽罗大观</strong>
+            </div>
+            <p id="activeNote">
+              柬埔寨小棋楠沉香加入越南芽庄白棋楠，兰花香与棋楠馥郁并行。
+            </p>
+            <div class="spec-grid">
+              <span>规格</span>
+              <strong id="activeSpec">21cm · 10g</strong>
+              <span>香调</span>
+              <strong id="activeTone">兰花香 / 棋楠韵</strong>
+              <span>价格</span>
+              <strong id="activePrice">¥3800</strong>
+            </div>
+            <div class="selector" id="productSelector" aria-label="选择产品"></div>
+          </aside>
+        </section>
+
+        <section class="section intro reveal">
+          <div>
+            <p class="eyebrow">Design Direction</p>
+            <h2>高级不是堆满信息，而是让每一层香气有自己的呼吸。</h2>
+          </div>
+          <p>
+            页面以墨色、朱砂和微光金属材质作为视觉骨架，保留大片安静背景。
+            3D 产品模型承担首屏记忆点，真实图像负责产品细节，文案只留下香材、香气与使用场景。
+          </p>
+        </section>
+
+        <section class="collection" id="collection" aria-label="产品图鉴">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Agarwood Collection</p>
+            <h2>沉香线香图鉴</h2>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="ritual" id="ritual" aria-label="使用场景">
+          <div class="ritual-copy reveal">
+            <p class="eyebrow">Ritual Scenes</p>
+            <h2>书房、雅集、静夜，香气不喧哗。</h2>
+            <p>
+              适合将产品页延展成小程序、品牌官网或私域成交页：
+              首屏吸引，图鉴承接，场景说明帮助用户理解不同价位香品的使用时刻。
+            </p>
+          </div>
+          <div class="ritual-list">
+            <article class="reveal">
+              <span>01</span>
+              <h3>静坐独处</h3>
+              <p>以清凉、甜韵、木质尾韵建立心绪的稳定感。</p>
+            </article>
+            <article class="reveal">
+              <span>02</span>
+              <h3>茶席雅集</h3>
+              <p>用层次清晰的沉香香气烘托空间，而不压过茶香。</p>
+            </article>
+            <article class="reveal">
+              <span>03</span>
+              <h3>礼赠收藏</h3>
+              <p>用礼盒、编号、香材说明强化高级产品的仪式感。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="craft" id="craft" aria-label="工艺亮点">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Craft Notes</p>
+            <h2>从香材到燃烧体验</h2>
+          </div>
+          <div class="craft-grid">
+            <article class="reveal">
+              <h3>香材可感知</h3>
+              <p>海南、芽庄、富森红土、棋楠、龙涎等信息进入产品卡片，帮助高端用户理解差异。</p>
+            </article>
+            <article class="reveal">
+              <h3>动效有节制</h3>
+              <p>3D 模型缓慢呼吸、香烟上升、滚动时轻微转场，保持“静”的品牌气质。</p>
+            </article>
+            <article class="reveal">
+              <h3>移动端优先</h3>
+              <p>小屏幕上产品切换、真实图片和香调信息保持可读，不依赖复杂悬停操作。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

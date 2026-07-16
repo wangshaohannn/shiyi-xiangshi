@@ -1,0 +1,72 @@
+<view class="page booking-page">
+  <view class="booking-hero">
+    <view class="eyebrow">PRIVATE BOOKING</view>
+    <view class="title">预约体验</view>
+    <view class="subtitle">把一次到店体验做得更像小型雅集：时间、人数、服务内容都可以提前确认。</view>
+    <view class="booking-summary">
+      <text>60-120min</text>
+      <text>手作课程</text>
+      <text>团建定制</text>
+    </view>
+  </view>
+
+  <view class="section process">
+    <view class="process-item soft-panel">
+      <view class="process-index">一</view>
+      <view class="process-title">选体验</view>
+      <view class="process-copy">香牌、选香、团建或礼赠。</view>
+    </view>
+    <view class="process-item soft-panel">
+      <view class="process-index">二</view>
+      <view class="process-title">留信息</view>
+      <view class="process-copy">方便主理人确认细节。</view>
+    </view>
+    <view class="process-item soft-panel">
+      <view class="process-index">三</view>
+      <view class="process-title">到店</view>
+      <view class="process-copy">按确认时间参加体验。</view>
+    </view>
+  </view>
+
+  <view class="section booking-form card">
+    <view class="field">
+      <text class="field-label">预约项目</text>
+      <picker mode="selector" range="{{serviceOptions}}" value="{{serviceIndex}}" data-field="serviceIndex" bindchange="bindPicker">
+        <view class="picker-line">{{serviceOptions[serviceIndex]}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <text class="field-label">人数</text>
+      <picker mode="selector" range="{{peopleOptions}}" value="{{peopleIndex}}" data-field="peopleIndex" bindchange="bindPicker">
+        <view class="picker-line">{{peopleOptions[peopleIndex]}}</view>
+      </picker>
+    </view>
+    <view class="field-grid">
+      <view class="field">
+        <text class="field-label">日期</text>
+        <picker mode="date" value="{{date}}" bindchange="bindDate">
+          <view class="picker-line">{{date}}</view>
+        </picker>
+      </view>
+      <view class="field">
+        <text class="field-label">时段</text>
+        <picker mode="selector" range="{{timeOptions}}" value="{{timeIndex}}" data-field="timeIndex" bindchange="bindPicker">
+          <view class="picker-line">{{timeOptions[timeIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="field">
+      <text class="field-label">姓名</text>
+      <input class="input" placeholder="请输入姓名" value="{{name}}" data-field="name" bindinput="bindInput" />
+    </view>
+    <view class="field">
+      <text class="field-label">电话 / 微信</text>
+      <input class="input" placeholder="用于确认预约" value="{{phone}}" data-field="phone" bindinput="bindInput" />
+    </view>
+    <view class="field">
+      <text class="field-label">备注</text>
+      <textarea class="textarea" placeholder="想体验的香气、同行人情况或其他需求" value="{{remark}}" data-field="remark" bindinput="bindInput" />
+    </view>
+    <button class="primary-button submit" bindtap="submitBooking">提交预约</button>
+  </view>
+</view>

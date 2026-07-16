@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: shiyi-xiangshi
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_ENV
+        value: production
+      - key: SITE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_STATE_TABLE
+        value: site_state
+      - key: SHIYI_STATE_ID
+        value: default
+      - key: ADMIN_TOKEN
+        sync: false

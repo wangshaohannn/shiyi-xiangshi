@@ -1,0 +1,84 @@
+<view class="page home-page">
+  <view class="hero">
+    <image class="hero-image" src="/assets/shiyi-incense-workshop.jpeg" mode="aspectFill" />
+    <view class="hero-shade"></view>
+    <view class="hero-content">
+      <text class="hero-kicker">INCENSE HOUSE</text>
+      <text class="hero-title">拾壹香室</text>
+      <text class="hero-copy">天然香材、手作体验与东方香气美学，放进日常可抵达的一炷香里。</text>
+      <view class="hero-proof">
+        <text>天然香材</text>
+        <text>手作体验</text>
+        <text>预约制香室</text>
+      </view>
+      <view class="hero-actions">
+        <button class="primary-button" bindtap="goShop">选购香品</button>
+        <button class="ghost-light-button" bindtap="goBooking">预约体验</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="quick-grid">
+    <button class="quick-entry soft-panel" bindtap="goShop">
+      <text class="quick-index">01</text>
+      <text class="quick-title">香品</text>
+      <text class="quick-copy">按场景选香</text>
+    </button>
+    <button class="quick-entry soft-panel" bindtap="goMaker">
+      <text class="quick-index">02</text>
+      <text class="quick-title">调香</text>
+      <text class="quick-copy">生成香气画像</text>
+    </button>
+    <button class="quick-entry soft-panel" bindtap="goBooking">
+      <text class="quick-index">03</text>
+      <text class="quick-title">预约</text>
+      <text class="quick-copy">到店体验</text>
+    </button>
+  </view>
+
+  <view class="section-head">
+    <view class="section-head-main">
+      <view class="eyebrow">SCENES</view>
+      <view class="title small-title">本季香单</view>
+      <view class="gold-rule"></view>
+    </view>
+    <button class="text-button" bindtap="goShop">查看全部</button>
+  </view>
+
+  <scroll-view class="product-scroll" scroll-x>
+    <view class="product-track">
+      <view class="feature-card card" wx:for="{{featured}}" wx:key="id" data-id="{{item.id}}" bindtap="previewProduct">
+        <image class="feature-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="feature-body">
+          <view class="row space-between">
+            <text class="pill">{{item.categoryLabel}}</text>
+            <text class="price">¥{{item.price}}</text>
+          </view>
+          <view class="feature-name">{{item.name}}</view>
+          <view class="feature-note">{{item.note}} · {{item.spec}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="section services">
+    <view class="service soft-panel" wx:for="{{services}}" wx:key="title">
+      <view class="service-title">{{item.title}}</view>
+      <view class="service-text">{{item.text}}</view>
+    </view>
+  </view>
+
+  <view class="section maker-panel soft-panel">
+    <view>
+      <view class="eyebrow">ATELIER</view>
+      <view class="title small-title">一炷香成</view>
+      <view class="subtitle">用滑杆调沉香、檀木、白茶与花香，生成自己的香气画像。</view>
+    </view>
+    <button class="primary-button" bindtap="goMaker">开始调香</button>
+  </view>
+
+  <view class="section notes soft-panel">
+    <view class="eyebrow">FIELD NOTES</view>
+    <view class="note" wx:for="{{notes}}" wx:key="*this">{{item}}</view>
+  </view>
+</view>
